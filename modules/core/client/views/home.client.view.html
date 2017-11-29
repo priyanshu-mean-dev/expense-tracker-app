@@ -1,0 +1,39 @@
+<section>
+<br>
+<div class="row">
+
+  <div class="col-md-12">
+
+    <div class="well well-md">
+      <h1 class="text-center text-info">Expense Tracker</h1>
+      <p class="text-danger text-center">your daily expense manager.....</p>
+
+
+    </div>
+
+    <div class="panel panel-info" ng-hide="vm.authentication.user">
+      <div class="panel-body">
+          <h4 class="text-center text-warning"> Please Sign Up to continue .......</h4>
+      </div>
+
+    </div>
+
+    <div class="col-md-8 col-md-offset-2" ng-show="vm.authentication.user">
+
+      <div class="col-md-4 col-md-offset-2">
+        <button type="button" data-ui-sref="tasks.create" class="btn btn-info btn-md" name="button">Add Expense Task</button>
+
+      </div>
+
+      <div class="col-md-4">
+        <button type="button" data-ui-sref="tasks.list" class="btn btn-warning btn-md" name="button">View Expense Task</button>
+
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+
+</section>

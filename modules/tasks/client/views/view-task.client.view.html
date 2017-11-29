@@ -1,0 +1,51 @@
+<section>
+  <div class="page-header">
+    <h1 ng-bind="vm.task.name"></h1><small>
+      <em class="text-muted">
+        <b>Added on</b>
+        <span ng-bind="vm.task.createdAt | date:'mediumDate'"></span>
+      </em>
+    </small>
+  </div>
+  <div class="pull-right" style="margin-left: 2px;">
+    <a ng-show="vm.task._id" class="btn btn-danger" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="pull-right" >
+    <a ng-show="vm.task._id" data-ui-sref="tasks.edit({taskId: vm.task._id})" class="btn btn-info">
+      <i class="glyphicon glyphicon-pencil"></i>
+    </a>
+  </div>
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h4 class="text-center">Description</h4>
+        </div>
+        <div class="panel-body">
+          <p class="lead">{{vm.task.description}}</p>
+        </div>
+        <div class="panel-heading">
+          <h4 class="text-center">Amount</h4>
+        </div>
+        <div class="panel-body">
+          <p class="lead">{{vm.task.amount | currency}}</p>
+        </div>
+        <div class="panel-footer">
+          <small>
+            <em class="text-muted">
+              <b>Updated on</b>
+              <span ng-bind="vm.task.updatedAt | date:'mediumDate'"></span>
+              by
+              <span ng-if="vm.task.user" ng-bind="vm.task.user.displayName"></span>
+              <span ng-if="!vm.task.user">Deleted User</span>
+            </em>
+          </small></div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
