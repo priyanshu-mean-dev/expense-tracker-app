@@ -7,7 +7,7 @@
   "author": "priyanshu mishra",
   "license": "MIT",
   "engines": {
-    "node": ">=6.10.0",
+    "node": "8.9.1",
     "npm": ">=3.10.8"
   },
   "scripts": {
