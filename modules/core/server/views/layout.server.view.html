@@ -68,17 +68,13 @@
 
   <!--Application JavaScript Files-->
     {{#each jsFiles}}<script type="text/javascript" src="/{{this}}"></script>{{/each}}
-  
+
   <!--owasp config sync-->
   <script type="text/javascript">
     var sharedConfig = {{{ sharedConfig }}};
     owaspPasswordStrengthTest.config(sharedConfig.owasp);
   </script>
 
-  {{#if livereload}}
-  <!--Livereload script rendered -->
-  <script type="text/javascript" src="{{host}}:35729/livereload.js"></script>
-  {{/if}}
 </body>
 
 </html>
