@@ -1,5 +1,5 @@
 {
-  "name": "Expense Tracker",
+  "name": "expense tracker",
   "description": "A demo application to track your expenses.",
   "license": "MIT",
   "dependencies": {
